@@ -17,7 +17,7 @@ def hello():
 def upload():
     
     form = MyForm()
-    if form.validate_on_submit():
+    if form.validate_on_submit ():
         
         _, file_ext = os.path.splitext(form.file.data.filename)
         files_dir=os.path.join(os.getcwd(), 'files')
