@@ -1,0 +1,12 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+<h1>Hi, anon!!!</h1>
+{% if data %}
+{% for country in data %}
+{{data[country]}} is the capital of {{country}}<br />
+{% endfor %}
+{% endif%}
+<a href={{url_for('upload')}}>UPLOAD</a>
+
+{% endblock %}
