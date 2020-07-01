@@ -15,13 +15,16 @@ def in_input(m,text):
 
 
 def detectEncoding(filename):
+    i=0
     detector = UniversalDetector()
     with open(filename, 'rb') as fh:
         for line in fh:
+            i+=1
             detector.feed(line)
             if detector.done:
                 break
         detector.close()
+        print('=======',i)
     return detector.result
 
 
